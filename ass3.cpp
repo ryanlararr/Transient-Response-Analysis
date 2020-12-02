@@ -27,27 +27,27 @@ using namespace std;
 * Author:					Ryan Arreola
 **********************************/
 void main() {
-	int opt = 0;		//Input option
-	double x = 0.0f;	//Initial coniditon of x
-	double y = 3;		//Initial condiiton of y
-	double h = 0.0;		//Step size
+    int opt = 0;		//Input option
+    double x = 0.0f;	//Initial coniditon of x
+    double y = 3;		//Initial condiiton of y
+    double h = 0.0;		//Step size
 
-	do {
-		menuOptions();
-		validateMenuInput(opt);
-		validateStepInput(h);
+    do {
+        menuOptions();
+        validateMenuInput(opt);
+        validateStepInput(h);
 
-		tableHeader();
-		reset(y);
-		for (x = 0; x < 2 - h; x += h) {
-			//Display row for current data point
-			cout << fixed << setprecision(1) << x + h << "\t\t";
-			cout << fixed << setprecision(3) << exact(x + h) << "\t\t";
-			cout << ODE[opt](x, y, h) << "\t\t";
-			error(exact(x + h), ODE[opt](x, y, h));
+        tableHeader();
+        reset(y);
+        for (x = 0; x < 2 - h; x += h) {
+            //Display row for current data point
+            cout << fixed << setprecision(1) << x + h << "\t\t";
+            cout << fixed << setprecision(3) << exact(x + h) << "\t\t";
+            cout << ODE[opt](x, y, h) << "\t\t";
+            error(exact(x + h), ODE[opt](x, y, h));
 
-			//Get next y value
-			y = ODE[opt](x, y, h);
-		}
-	} while (true);
+            //Get next y value
+            y = ODE[opt](x, y, h);
+        }
+    } while (true);
 }

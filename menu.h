@@ -27,12 +27,12 @@ using namespace std;
 * Author:					Ryan Arreola
 **********************************/
 void menuOptions() {
-	cout << "\n>> Choose the method for solving the ODE\n";
-	cout << "1. Euler's Method\n";
-	cout << "2. Runge-Kutta 2nd Order Method\n";
-	cout << "3. Runge-Kutta 3rd Order Method\n";
-	cout << "4. Runge-Kutta 4th Order Method\n";
-	cout << "5. Exit\n";
+    cout << "\n>> Choose the method for solving the ODE\n";
+    cout << "1. Euler's Method\n";
+    cout << "2. Runge-Kutta 2nd Order Method\n";
+    cout << "3. Runge-Kutta 3rd Order Method\n";
+    cout << "4. Runge-Kutta 4th Order Method\n";
+    cout << "5. Exit\n";
 }
 
 /*********************************
@@ -44,7 +44,7 @@ void menuOptions() {
 * Author:					Ryan Arreola
 **********************************/
 void tableHeader() {
-	cout << "\nTime\t\t" << "Exact\t\t" << "Est.\t\t" << "Percentage Error" << endl;
+    cout << "\nTime\t\t" << "Exact\t\t" << "Est.\t\t" << "Percentage Error" << endl;
 }
 
 /*********************************
@@ -56,16 +56,16 @@ void tableHeader() {
 * Author:					Ryan Arreola
 **********************************/
 void validateMenuInput(int& opt) {
-	do {
-		cin >> opt;
-		if (!cin || (opt < 1 || opt > 5)) {
-			cin.clear();
-			cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-			cout << "Invalid input. Try again.\n";
-		}
-		else break;
-	} while (true);
-	opt--; if (opt == 4) exit(0);
+    do {
+        cin >> opt;
+        if (!cin || (opt < 1 || opt > 5)) {
+            cin.clear();
+            cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            cout << "Invalid input. Try again.\n";
+        }
+        else break;
+    } while (true);
+    opt--; if (opt == 4) exit(0);
 }
 
 /*********************************
@@ -77,14 +77,14 @@ void validateMenuInput(int& opt) {
 * Author:					Ryan Arreola
 **********************************/
 void validateStepInput(double& h) {
-	cout << "\nChoose step size \"h\" (0.8, 0.2, 0.05)" << endl;
-	do {
-		cin >> h;
-		if (!cin || (h != 0.8 && h != 0.2 && h != 0.05)) {
-			cin.clear();
-			cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-			cout << "Invalid input. Try again.\n";
-		}
-		else break;
-	} while (true);
+    cout << "\nChoose step size \"h\" (0.8, 0.2, 0.05)" << endl;
+    do {
+        cin >> h;
+        if (!cin || (h != 0.8 && h != 0.2 && h != 0.05)) {
+            cin.clear();
+            cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            cout << "Invalid input. Try again.\n";
+        }
+        else break;
+    } while (true);
 }

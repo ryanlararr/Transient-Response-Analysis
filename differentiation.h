@@ -30,7 +30,7 @@ using namespace std;
 * Author:					Ryan Arreola
 **********************************/
 double exact(double x) {
-	return 0.1 * cos(4 * x) + 0.2 * sin(4 * x) + 2.9 * exp(-2 * x);
+    return 0.1 * cos(4 * x) + 0.2 * sin(4 * x) + 2.9 * exp(-2 * x);
 }
 
 /*********************************
@@ -42,9 +42,9 @@ double exact(double x) {
 * Author:					Ryan Arreola
 **********************************/
 double derive(double  x, double y) {
-	double test = cos(4 * x);
-	double t2 = 2 * y;
-	return cos(4 * x) - 2 * y;
+    double test = cos(4 * x);
+    double t2 = 2 * y;
+    return cos(4 * x) - 2 * y;
 }
 
 /*********************************
@@ -56,9 +56,9 @@ double derive(double  x, double y) {
 * Author:					Ryan Arreola
 **********************************/
 double rk2(double x, double y, double h) {
-	double k1 = derive(x, y);
-	double k2 = derive(x + h, y + k1 * h);
-	return y + h * (k1 + k2) / 2;
+    double k1 = derive(x, y);
+    double k2 = derive(x + h, y + k1 * h);
+    return y + h * (k1 + k2) / 2;
 }
 
 /*********************************
@@ -70,10 +70,10 @@ double rk2(double x, double y, double h) {
 * Author:					Ryan Arreola
 **********************************/
 double rk3(double x, double y, double h) {
-	double k1 = derive(x, y);
-	double k2 = derive(x + (h / 2), y + (1 / 2) * k1 * h);
-	double k3 = derive(x + h, y - k1 * h + 2 * k2 * h);
-	return y + h * (k1 + 4 * k2 + k3) / 6;
+    double k1 = derive(x, y);
+    double k2 = derive(x + (h / 2), y + (1 / 2) * k1 * h);
+    double k3 = derive(x + h, y - k1 * h + 2 * k2 * h);
+    return y + h * (k1 + 4 * k2 + k3) / 6;
 }
 
 /*********************************
@@ -85,11 +85,11 @@ double rk3(double x, double y, double h) {
 * Author:					Ryan Arreola
 **********************************/
 double rk4(double x, double y, double h) {
-	double k1 = derive(x, y);
-	double k2 = derive(x + h / 2, y + (k1 * h / 2));
-	double k3 = derive(x + h / 2, y + (k2 * h / 2));
-	double k4 = derive(x + h, y + k3 * h);
-	return y + h * (k1 + 2 * k2 + 2 * k3 + k4) / 6;
+    double k1 = derive(x, y);
+    double k2 = derive(x + h / 2, y + (k1 * h / 2));
+    double k3 = derive(x + h / 2, y + (k2 * h / 2));
+    double k4 = derive(x + h, y + k3 * h);
+    return y + h * (k1 + 2 * k2 + 2 * k3 + k4) / 6;
 }
 
 /*********************************
@@ -101,7 +101,7 @@ double rk4(double x, double y, double h) {
 * Author:					Ryan Arreola
 **********************************/
 double euler(double x, double y, double h) {
-	return y + h * derive(x, y);
+    return y + h * derive(x, y);
 }
 
 /*********************************
@@ -123,7 +123,7 @@ double (*ODE[])(double, double, double) = { euler, rk2, rk3, rk4 };
 * Author:					Ryan Arreola
 **********************************/
 void error(double analytical, double numerical) {
-	cout << setprecision(2) << abs(1 - (numerical / analytical)) * 100 << endl;
+    cout << setprecision(2) << abs(1 - (numerical / analytical)) * 100 << endl;
 }
 
 /*********************************
@@ -134,4 +134,4 @@ void error(double analytical, double numerical) {
 * Version:					1.0
 * Author:					Ryan Arreola
 **********************************/
-void reset(double &y) { y = 3.0; }
+void reset(double& y) { y = 3.0; }
