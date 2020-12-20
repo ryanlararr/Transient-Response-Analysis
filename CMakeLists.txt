@@ -2,4 +2,4 @@
 
 project ("ass3")
 
-add_executable (ass3 "ass3.cpp" "differentiation.h" "menu.h")
+add_executable (ass3 "transient-response.cpp" "differentiation.h" "menu.h")

@@ -1,5 +1,5 @@
 ﻿/*
-* Filename: ass3.cpp
+* Filename: transient-response
 * Version: 1.0
 * Author: Ryan Arreola
 * Assignment name: Transient-Response Analysis of 1st Order Systems
