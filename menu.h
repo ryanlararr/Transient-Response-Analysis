@@ -8,7 +8,7 @@
 * Assignment #:			3
 * Assignment name:		Transient-Response Analysis of 1st Order Systems
 * Due Date:				December 6, 2020
-* Submission Date:
+* Submission Date:      December 2, 2020
 * Professor:			Hala Own
 * Purpose:				Defining menu functions to avoid clutter in main function.
 */

@@ -1,16 +1,9 @@
 ﻿/*
-* Filename:				ass3.cpp
-* Version:				1.0
-* Author:				Ryan Arreola
-* Student No.:			040950298
-* Course Name/Number:	Numerical Computing - CST8233
-* Lab Sect:				311
-* Assignment #:			3
-* Assignment name:		Transient-Response Analysis of 1st Order Systems
-* Due Date:				December 6, 2020
-* Submission Date:
-* Professor:			Hala Own
-* Purpose:				Demonstration of well known methods for 1st order ODE's such as: Euler's, Runge-Kutta 1,2,3, and 4th Order Methods.
+* Filename: ass3.cpp
+* Version: 1.0
+* Author: Ryan Arreola
+* Assignment name: Transient-Response Analysis of 1st Order Systems
+* Purpose: Demonstration of well known methods for 1st order ODE's such as: Euler's, Runge-Kutta 1,2,3, and 4th Order Methods.
 */
 
 #include "differentiation.h"
@@ -19,12 +12,12 @@
 using namespace std;
 
 /*********************************
-* Function Name:			main
-* Purpose:					Main function for choosing a numerical ODE method and displaying the results.
-* Function In parameters:	none
-* Function out parameters:	none
-* Version:					1.0
-* Author:					Ryan Arreola
+* Function Name: main
+* Purpose: Main function for choosing a numerical ODE method and displaying the results.
+* Function In parameters: none
+* Function out parameters: none
+* Version: 1.1
+* Author: Ryan Arreola
 **********************************/
 void main() {
     int opt = 0;		//Input option
