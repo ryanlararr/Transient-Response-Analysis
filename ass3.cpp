@@ -34,7 +34,7 @@ void main() {
         reset(y);
         for (x = 0; x < 2 - h; x += h) {
             //Display row for current data point
-            cout << fixed << setprecision(1) << x + h << "\t\t";
+            cout << fixed << setprecision(2) << x + h << "\t\t";
             cout << fixed << setprecision(3) << exact(x + h) << "\t\t";
             cout << ODE[opt](x, y, h) << "\t\t";
             error(exact(x + h), ODE[opt](x, y, h));
